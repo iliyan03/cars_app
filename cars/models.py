@@ -4,9 +4,10 @@ from django.db import models
 
 class CarAd(models.Model):
     link = models.URLField()
-    date = models.CharField(max_length=100)
+    date = models.DateTimeField()
     img = models.URLField()
-    price = models.DecimalField(decimal_places=2, max_digits=7)
+    #price = models.DecimalField(decimal_places=2, max_digits=7)
+    price = models.IntegerField()
     model = models.CharField(max_length=200)
     description = models.CharField(max_length=400)
     comment = models.CharField(max_length=400)
